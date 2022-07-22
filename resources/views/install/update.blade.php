@@ -157,7 +157,7 @@
 
         @else
             <div class="text-left" style="margin-top: 5rem;">
-                <strong>Fix the above issues and reload the page to update MAX-QR to {{ $updateVersion }}</strong>
+                <strong>Fix the above issues and reload the page to update Agreebill to {{ $updateVersion }}</strong>
             </div>
         @endif
 

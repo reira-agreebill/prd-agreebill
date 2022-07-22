@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title> {{$account_info != NULL ?$account_info->application_name:"MAX-QR Digital Menu"}}</title>
+    <title> {{$account_info != NULL ?$account_info->application_name:"Agreebill Digital Menu"}}</title>
 
     <!-- ================= Favicon ================== -->
     <!-- Standard -->

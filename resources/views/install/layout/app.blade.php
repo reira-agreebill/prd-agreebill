@@ -8,7 +8,7 @@
     <meta name="author" content="">
 
 
-    <title>MAX-QR Digital Menu </title>
+    <title>Agreebill Digital Menu </title>
 
     <!-- Slick Slider -->
         <link href="{{asset('css/app.css')}}" rel="stylesheet">

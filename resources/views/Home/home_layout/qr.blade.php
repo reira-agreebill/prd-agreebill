@@ -8,7 +8,7 @@
     <meta name="author" content="">
 
 
-    <title>{{$account_info != NULL ? $account_info->application_name:"MAX-QR Digital Menu"}}</title>
+    <title>{{$account_info != NULL ? $account_info->application_name:"Agreebill Digital Menu"}}</title>
 
 
     <!-- ================= Favicon ================== -->

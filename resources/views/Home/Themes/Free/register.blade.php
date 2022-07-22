@@ -146,7 +146,7 @@
                 <div class="row align-items-center">
                     <div class="col-xl-12text-center text-xl-left">
                         {!! $selected_language->data['crafted_with_love'] ?? 'Crafted with <i class="fa fa-heart text-danger"></i> by' !!}
-                        {{$account_info !=NULL ? $account_info->application_name:'MAX-QR MENU'}}.
+                        {{$account_info !=NULL ? $account_info->application_name:'Agreebill MENU'}}.
                     </div><!-- /.col-lg-4 -->
 
                 </div><!-- /.row -->

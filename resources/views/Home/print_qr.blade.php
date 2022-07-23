@@ -16,7 +16,7 @@
                     <div class="card-body px-0">
                         <p class="text-center"><strong>Get our MENU on your PHONE</strong></p>
 
-                        <h4 class="text-center"><strong>Table no:</strong></h4>
+                        <h4 class="text-center"><strong>Room no:</strong></h4>
 
                         <p class="text-muted text-center"> <strong>Simply open your phone's camera and point it at the code.<br>
                             Tap on the link that appears.</strong><br><br><br>

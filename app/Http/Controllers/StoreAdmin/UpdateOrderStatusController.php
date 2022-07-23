@@ -17,11 +17,12 @@ class UpdateOrderStatusController extends Controller
     }
     public function updateStatus(Request $request,$id){
         $notification = new NotificationController();
-////        return $request;
+//        return $request;
 //        return $id;
 
         $data = request()->validate([
-            'status'=>'required'
+            'status'=>'required',
+            'reject_reason'=>''
         ]);
 
         if(Order::whereId($id)->update($data)){

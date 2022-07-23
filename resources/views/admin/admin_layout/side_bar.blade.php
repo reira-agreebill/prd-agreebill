@@ -18,7 +18,7 @@
         <!-- Brand -->
         <div class="sidenav-header d-flex align-items-center">
             <a class="navbar-brand" >
-                <h2 class="text-white">{{ __('chef.adminpanel') }}
+                <h2 class="text-white agree-navbar">{{ __('chef.adminpanel') }}
                 </h2>
             </a>
             <div class="ml-auto">
@@ -75,13 +75,13 @@
                         </a>
                     </li>
 
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a @if($root=="Expense") class="nav-link active" @endif class="nav-link" href="{{route('expense')}}">
                             <i class="fas fa-calculator text-white"></i>
                             <span class="nav-link-text">Expense</span>&nbsp; &nbsp;
 {{--                            <span class="badge badge-sm badge-white text-danger blink_me">new</span>--}}
                         </a>
-                    </li>
+                    </li> -->
 
 
                     <li class="nav-item">

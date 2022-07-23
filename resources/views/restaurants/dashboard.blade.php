@@ -60,11 +60,11 @@
                                             @if($pending->status == 1)
                                                 <div class="col">
                                                     <a class="btn btn-success btn-sm text-white"
-                                                       onclick="document.getElementById('accept_order-{{$pending->id}}').submit();"> {{$selected_language->data['store_accept'] ?? 'Accept'}}</a>
+                                                       onclick="if(confirm('Are you sure you want to accept this Order ?')){ event.preventDefault();document.getElementById('accept_order{{$pending->id}}').submit();}"> {{$selected_language->data['store_accept'] ?? 'Accept'}}</a>
                                                 </div>
                                                 <div class="col">
                                                     <a class="btn btn-outline-danger btn-sm"
-                                                       onclick="document.getElementById('reject_order{{$pending->id}}').submit();"> {{$selected_language->data['store_reject'] ?? 'Reject'}}</a>
+                                                       onclick="if(confirm('Are you sure you want to reject this Order ?')){ event.preventDefault();document.getElementById('reject_order{{$pending->id}}').submit();}"> {{$selected_language->data['store_reject'] ?? 'Reject'}}</a>
                                                     @endif
                                                 </div>
 
@@ -195,7 +195,7 @@
                                     <div class="d-flex justify-content-between pt-1">
                                         <div>
                                             <span
-                                                class="text-danger text-sm font-weight-bold">{{$selected_language->data['store_plan_date'] ?? 'Plan End Date'}}</span>
+                                                class="text-danger text-sm font-weight-bold">{{$selected_language->data['store_plan_date'] ?? 'Contract End Date'}}</span>
                                         </div>
                                         <div class="text-right">
                                             <strong

@@ -7,7 +7,7 @@
         <div class="card mb-4">
             <!-- Card header -->
             <div class="card-header">
-                <h3 class="mb-0">Add New Table </h3>
+                <h3 class="mb-0">Add New Room </h3>
                 @if(session()->has("MSG"))
                     <div class="alert alert-{{session()->get("TYPE")}}">
                         <strong> <a>{{session()->get("MSG")}}</a></strong>
@@ -23,20 +23,20 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label class="form-control-label" for="example3cols2Input">Table Name/Number</label>
+                                <label class="form-control-label" for="example3cols2Input">Room Name/Number</label>
                                 <input type="text" name="table_name" class="form-control" required>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label class="form-control-label" for="example3cols2Input">Table Code</label>
+                                <label class="form-control-label" for="example3cols2Input">Room Code</label>
                                 <input type="text" name="table_code" class="form-control" >
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label class="form-control-label" for="exampleFormControlSelect1">Visibility</label>
+                                <label class="form-control-label" for="exampleFormControlSelect1">Enable</label>
                                 <div class="col-auto">
                                     <label class="custom-toggle">
                                         <input type="checkbox" name="is_active" checked="">

@@ -355,12 +355,12 @@ class RestaurantAdminPageController extends Controller
 
     public function tables(){
         $transation = new TranslationService();
-        $tables = Table::all()->SortByDesc('id')->where('store_id', auth()->id());
+        $tables = Table::all()->SortBy('table_name')->where('store_id', auth()->id());
         $sanboxNumber = Setting::all()->where('key','PhoneCode')->first()->value;
         return view('restaurants.tables.all_tables',[
-            'title' => 'All Tables',
+            'title' => 'All Rooms',
             'tables'=>$tables,
-            'root_name' => 'Tables',
+            'root_name' => 'Room',
             'sanboxNumber'=>$sanboxNumber,
             'languages'=>$transation->languages(),
             'selected_language' => $transation->selected_language()
@@ -372,9 +372,9 @@ class RestaurantAdminPageController extends Controller
         $tables = Table::all()->SortByDesc('id')->where('store_id', auth()->id());
         $sanboxNumber = Setting::all()->where('key','PhoneCode')->first()->value;
         return view('restaurants.tables.table_report',[
-            'title' => 'All Tables',
+            'title' => 'All Rooms',
             'tables'=>$tables,
-            'root_name' => 'Table Report',
+            'root_name' => 'Room Report',
             'sanboxNumber'=>$sanboxNumber,
             'languages'=>$transation->languages(),
             'selected_language' => $transation->selected_language()
@@ -386,8 +386,8 @@ class RestaurantAdminPageController extends Controller
 
 
         return view('restaurants.tables.add_new_table',[
-            'title' => 'Add New Tables',
-            'root_name' => 'Tables',
+            'title' => 'Add New Room',
+            'root_name' => 'Room',
             'sanboxNumber'=>$sanboxNumber,
             'languages'=>$transation->languages(),
             'selected_language' => $transation->selected_language()
@@ -400,9 +400,9 @@ class RestaurantAdminPageController extends Controller
         $head_name="Update Table";
         $sanboxNumber = Setting::all()->where('key','PhoneCode')->first()->value;
         return view('restaurants.tables.edit_table',compact('id'),[
-            'title' => 'Table',
-            'root_name' => 'Table',
-            'root' => 'Table',
+            'title' => 'Room',
+            'root_name' => 'Room',
+            'root' => 'Room',
             'sanboxNumber'=>$sanboxNumber,
             'languages'=>$transation->languages(),
             'selected_language' => $transation->selected_language()
@@ -415,7 +415,7 @@ class RestaurantAdminPageController extends Controller
         $banner = StoreSlider::all()->SortByDesc('id')->where('store_id', auth()->id());
         $sanboxNumber = Setting::all()->where('key','PhoneCode')->first()->value;
         return view('restaurants.banner.banner',[
-            'title' => 'All Tables',
+            'title' => 'All Rooms',
             'banner'=>$banner,
             'root_name' => 'Banners',
             'sanboxNumber'=>$sanboxNumber,

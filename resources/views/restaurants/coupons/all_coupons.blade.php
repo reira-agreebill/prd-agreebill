@@ -50,7 +50,14 @@
                             <td>{{$data->name}}</td>
                             <td><span class="badge" style="background-color: #0a0a0a;color: yellow"><b>{{$data->code}}</b></span></td>
                             <td><span class="badge badge-info"><b>{{$data->discount_type}}</b></span></td>
-                            <td><b> @include('layouts.render.currency',["amount"=>$data->discount]) </b></td>
+                            <td><b> 
+                                @if($data->discount_type == "AMOUNT")
+                                    @include('layouts.render.currency',["amount"=>$data->discount]) 
+                                @endif
+                                @if($data->discount_type == "PERCENTAGE")
+                                    {{$data->discount}} % 
+                                @endif
+                            </b></td>
                             <td>
 
                                 @if($data->is_active == 1)
@@ -64,7 +71,7 @@
 
                             </td>
                             <td class="table-actions">
-                                <a onclick="if(confirm('Are you sure you want to delete this Expense?')){ event.preventDefault();document.getElementById('delete-form-{{$data->id}}').submit(); }" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Delete">
+                                <a onclick="if(confirm('Are you sure you want to delete this Coupon?')){ event.preventDefault();document.getElementById('delete-form-{{$data->id}}').submit(); }" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Delete">
                                     <i class="fas fa-trash text-danger"></i>
                                 </a>
 

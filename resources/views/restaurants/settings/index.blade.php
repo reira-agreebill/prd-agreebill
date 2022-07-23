@@ -377,6 +377,21 @@
                                     </td>
                                 </tr>
 
+                                <tr>
+                                    <td class="table-user">
+                                        <b>Debit / QR </b>
+                                    </td>
+
+                                    <td>
+                                        <label class="custom-toggle">
+                                            <input type="checkbox"
+                                                   {{$store_settings->IsQREnabled ?? '' == 1 ? "checked":false}} name="IsQREnabled">
+                                            <span class="custom-toggle-slider rounded-circle" data-label-off="Off"
+                                                  data-label-on="On"></span>
+                                        </label>
+                                    </td>
+                                </tr>
+
 
                                 <tr>
                                     <td class="table-user">

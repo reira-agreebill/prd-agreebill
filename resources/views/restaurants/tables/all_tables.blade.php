@@ -14,16 +14,16 @@
                 <div class="col-6 text-right">
                     <button onclick="event.preventDefault(); document.getElementById('add_new').submit();"
                             class="btn btn-md btn-primary btn-round btn-icon" data-toggle="tooltip"
-                            data-original-title="Add Tables">
+                            data-original-title="Add Room">
                         <span class="btn-inner--icon"><i class="fas fa-chair"></i></span>
-                        <span class="btn-inner--text">Add Tables</span>
+                        <span class="btn-inner--text">Add Room</span>
                     </button>
 
                     <button onclick="event.preventDefault(); document.getElementById('table_report').submit();"
                             class="btn btn-md btn-warning btn-round btn-icon" data-toggle="tooltip"
-                            data-original-title="Table Report">
+                            data-original-title="Room Report">
                         <span class="btn-inner--icon"><i class="fas fa-receipt"></i></span>
-                        <span class="btn-inner--text">Table Report</span>
+                        <span class="btn-inner--text">Room Report</span>
                     </button>
 
                     <form action="{{route('store_admin.add_tables')}}" method="get" id="add_new"></form>
@@ -54,7 +54,7 @@
                                     <div class="col">
 
                                         <h3 style="padding: 5px;">
-                                            Table No: <b>{{ $data->table_name }}</b>
+                                            Room No: <b>{{ $data->table_name }}</b>
                                         </h3>
 
 

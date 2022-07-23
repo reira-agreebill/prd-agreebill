@@ -6,7 +6,58 @@
 
     <div class="container-fluid">
 
+    <style>
 
+        /* The Modal (background) */
+        .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 36px;
+            border: 1px solid #888;
+            width: 72%;
+            left: 10%;
+        }
+
+        /* The Close Button */
+        .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+        }
+        
+        .modal-header {
+        padding: 2px 16px;
+        background-color: #f5365c;
+        color: white;
+        }
+        .h2-modal-header{
+        color: white;
+        }
+        .modal-body {padding: 2px 16px;}
+    </style>
 
 
         <div class="card">
@@ -97,9 +148,9 @@
                             <td>
                                 @if($order->status == 1)
                                     <a class="btn btn-primary btn-sm text-white"
-                                       onclick="document.getElementById('accept_order{{$order->id}}').submit();">{{$selected_language->data['store_orderstatus_acceptorder'] ?? 'Accept Order'}}</a>
-                                    <a class="btn btn-danger btn-sm text-white"
-                                       onclick="document.getElementById('reject_order{{$order->id}}').submit();">{{$selected_language->data['store_orderstatus_rejectorder'] ?? 'Reject Order'}}</a>
+                                       onclick="if(confirm('Are you sure you want to accept this Order ?')){ event.preventDefault();document.getElementById('accept_order{{$order->id}}').submit();}">{{$selected_language->data['store_orderstatus_acceptorder'] ?? 'Accept Order'}}</a>
+                                    <a id="reject-btn-{{$order->order_unique_id}}" class="btn btn-danger btn-sm text-white"
+                                       >{{$selected_language->data['store_orderstatus_rejectorder'] ?? 'Reject Order'}}</a>
                                 @endif
 
 
@@ -153,13 +204,51 @@
                                     @method('patch')
                                     <input style="visibility:hidden" name="status" type="hidden" value="2">
                                 </form>
-                                <form style="visibility: hidden" method="post"
-                                      action="{{route('store_admin.update_order_status',['id'=>$order->id])}}"
-                                      id="reject_order{{$order->id}}">
-                                    @csrf
-                                    @method('patch')
-                                    <input style="visibility:hidden" name="status" type="hidden" value="3">
-                                </form>
+                                
+                                @if($order->status == 1)
+                                <!-- The Modal -->
+                                <div id="rejectModal-{{$order->order_unique_id}}" class="modal">
+
+                                    <!-- Modal content -->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h2 class="h2-modal-header">Rejection note</h2>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form method="post"
+                                                action="{{route('store_admin.update_order_status',['id'=>$order->id])}}"
+                                                id="reject_order{{$order->id}}">
+                                                @csrf
+                                                @method('patch')
+                                                <label>Please provide information if this order is rejected<span style="color:red;">*</span></label>
+                                                <textarea name="reject_reason" class="form-control" required></textarea>
+                                                <input style="visibility:hidden" name="status" type="hidden" value="3">
+                                                <br/>
+                                                <button class="btn btn-danger btn-sm text-white" type="submit">
+                                                    {{$selected_language->data['store_orderstatus_rejectorder'] ?? 'Reject Order'}}
+                                                </button>
+                                                <button class="btn btn-danger btn-sm text-white close-{{$order->id}}" type="cancel">
+                                                    {{$selected_language->data['store_orderstatus_rejectorder'] ?? 'Cancel'}}
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <script>
+                                document.getElementById("reject-btn-{{$order->order_unique_id}}").onclick = function() {
+                                    document.getElementById("rejectModal-{{$order->order_unique_id}}").style.display = "block";
+                                }
+                                document.getElementsByClassName("close-{{$order->id}}")[0].onclick = function() {
+                                    document.getElementById("rejectModal-{{$order->order_unique_id}}").style.display = "none";
+                                }
+                                window.onclick = function(event) {
+                                if (event.target == modal) {
+                                    document.getElementById("rejectModal-{{$order->order_unique_id}}").style.display = "none";
+                                }
+                                }
+                                </script>
+                                @endif
                                     <form style="visibility: hidden" method="post"
                                           action="{{route('store_admin.update_order_status',['id'=>$order->id])}}"
                                           id="ready_to_serve{{$order->id}}">
@@ -186,10 +275,10 @@
                                     <i class="icofont-eye-alt"></i>
                                     </a>
 
-                                        <a class="btn btn-danger btn-sm text-white"
+                                        <!-- <a class="btn btn-danger btn-sm text-white"
                                            onclick="if(confirm('Are you sure you want to delete this Order ?')){ event.preventDefault();document.getElementById('delete-form-{{$order->id}}').submit(); }">
                                       <i class="icofont-delete-alt"></i>
-                                    </a>
+                                    </a> -->
 
                                         <form method="post" action="{{route('store_admin.order_delete')}}"
                                               id="delete-form-{{$order->id}}" style="display: none">
@@ -203,8 +292,6 @@
 
 
                         </tr>
-
-
 
 
                     @endforeach

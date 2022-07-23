@@ -20,6 +20,7 @@ class CreateOrdersTable extends Migration
             $table->string("table_no")->nullable();
             $table->string("customer_name")->nullable();
             $table->string("customer_phone")->nullable();
+            $table->string("reject_reason")->nullable();
             $table->decimal("sub_total")->nullable();
             $table->decimal("discount")->nullable();
             $table->decimal("tax")->nullable();

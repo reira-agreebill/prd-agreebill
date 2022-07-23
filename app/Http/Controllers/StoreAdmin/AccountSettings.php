@@ -75,6 +75,7 @@ class AccountSettings extends Controller
         ]);
         $data['store_id'] = auth()->id();
         $data['IsCodEnabled'] = isset($request['IsCodEnabled']) ? 1:0;
+        $data['IsQREnabled'] = isset($request['IsQREnabled']) ? 1:0;
         $data['IsPaypalEnabled'] = isset($request['IsPaypalEnabled']) ? 1:0;
         $data['IsStripeEnabled'] = isset($request['IsStripeEnabled']) ? 1:0;
         $data['IsRazorpayEnabled'] = isset($request['IsRazorpayEnabled']) ? 1:0;

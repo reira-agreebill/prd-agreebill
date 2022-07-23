@@ -3,7 +3,7 @@
         <!-- Brand -->
         <div class="sidenav-header d-flex align-items-center">
             <a class="navbar-brand" >
-               <h2 class="text-white">{{ Auth::user()->store_name }}</h2>
+               <h2 class="text-white agree-navbar">{{ Auth::user()->store_name }}</h2>
             </a>
             <div class="ml-auto">
                 <!-- Sidenav toggler -->
@@ -50,7 +50,7 @@
                     </li>
 
 
-                    <li {{ Request::is("admin/store/orders*") ? 'class=nav-item active':null}} >
+                    <!-- <li {{ Request::is("admin/store/orders*") ? 'class=nav-item active':null}} >
                         <a  class="nav-link"   href="{{route('store_admin.waiter_calls')}}">
                             <i class="icofont-chef text-blue"></i>
                             <span class="nav-link-text">{{$selected_language->data['store_waitercall'] ?? 'Waiter Call'}}</span>
@@ -63,7 +63,7 @@
                             <i class="icofont-money text-danger"></i>
                             <span class="nav-link-text">{{$selected_language->data['store_expense'] ?? 'Expense'}}</span>
                         </a>
-                    </li>
+                    </li> -->
 
 
                     <li {{Route::currentRouteNamed('store_admin.banner')? 'class=nav-item active':null }} >
@@ -86,7 +86,7 @@
                     <li {{Route::currentRouteNamed('admin/store/products')? 'class=nav-item active':null }} >
                         <a  class="nav-link"   href="{{route('store_admin.categories')}}">
                             <i class="icofont-fast-food text-orange" style="font-size: 1.3rem"></i>
-                            <span class="nav-link-text">{{$selected_language->data['store_inventory'] ?? 'Inventory'}}</span>
+                            <span class="nav-link-text">{{$selected_language->data['store_inventory'] ?? 'Menu'}}</span>
                         </a>
                     </li>
 
@@ -96,8 +96,8 @@
 
                     <li {{Route::currentRouteNamed('store_admin.all_tables')? 'class=nav-item active':null }} >
                         <a  class="nav-link"   href="{{route('store_admin.all_tables')}}">
-                            <i class="icofont-dining-table icofont-5x text-info" style="font-size: 1.3rem"></i>
-                            <span class="nav-link-text">{{$selected_language->data['store_tables'] ?? 'Tables'}}</span>
+                            <i class="icofont-hotel icofont-5x text-info" style="font-size: 1.3rem"></i>
+                            <span class="nav-link-text">{{$selected_language->data['store_tables'] ?? 'Room'}}</span>
                         </a>
                     </li>
 
@@ -107,12 +107,12 @@
                             <span class="nav-link-text">{{$selected_language->data['store_printqr'] ?? 'Print Qr-Code'}}</span>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a  class="nav-link" href="{{route('store_admin.subscription_plans')}}">
                             <i class="icofont-paper text-flat-darker" style="font-size: 1.1rem"></i>
                             <span class="nav-link-text">{{$selected_language->data['store_subscription_plans'] ?? 'Subscription Plans'}}</span>
                         </a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a  class="nav-link" href="{{route('store_admin.customers')}}">
                             <i class="fas fa-users text-red"></i>

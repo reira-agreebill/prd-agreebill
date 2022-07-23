@@ -86,7 +86,7 @@
                     <li {{Route::currentRouteNamed('admin/store/products')? 'class=nav-item active':null }} >
                         <a  class="nav-link"   href="{{route('store_admin.categories')}}">
                             <i class="icofont-fast-food text-orange" style="font-size: 1.3rem"></i>
-                            <span class="nav-link-text">{{$selected_language->data['store_inventory'] ?? 'Inventory'}}</span>
+                            <span class="nav-link-text">{{$selected_language->data['store_inventory'] ?? 'Menu'}}</span>
                         </a>
                     </li>
 

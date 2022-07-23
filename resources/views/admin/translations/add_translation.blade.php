@@ -376,7 +376,7 @@
                                                 <label class="form-control-label" for="input-email">Home First
                                                     Sub-Tittle</label>
                                                 <textarea name="home_first_sub_title" class="form-control" rows="3"
-                                                          required>With a contactless MAX-QR <b>MENU</b>.<br>Make your restaurant a safe place to eat or grab-and-go by deploying a touch-free QR Code menu.</textarea>
+                                                          required>With a contactless Agreebill <b>MENU</b>.<br>Make your restaurant a safe place to eat or grab-and-go by deploying a touch-free QR Code menu.</textarea>
                                             </div>
 
 

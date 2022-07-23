@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title> {{$account_info ?? '' != NULL ?$account_info->application_name:"MAX-QR Digital Menu"}}</title>
-    <link rel="icon" type="image/png" href="{{asset('themes/default/images/all-img/fav.png')}}">
+    <title> {{$account_info ?? '' != NULL ?$account_info->application_name:"Agreebill Digital Menu"}}</title>
+    <link rel="icon" type="image/png" href="{{asset('themes/default/images/all-img/agreebill-icon.png')}}">
     <!-- ================= Favicon ================== -->
     <!-- Standard -->
     <link rel="shortcut icon" href="{{asset($account_info ?? '' != NULL ?$account_info->application_logo:"http://placehold.it/144.png/000/fff")}}">

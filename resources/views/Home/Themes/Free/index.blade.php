@@ -146,7 +146,7 @@
                                 {{$selected_language->data['home_first_title'] ?? 'Re-open your restaurants'}}
                             </h1>
                             <p class="wow fade-in-top" data-wow-duration="1.4s" data-wow-delay="0.4s">
-                                {!!$selected_language->data['home_first_sub_title'] ?? 'With a contactless <b>MAX-QR MENU</b>.<br>Make your restaurant a safe place to eat or grab-and-go by deploying a touch-free QR Code menu.'!!}
+                                {!!$selected_language->data['home_first_sub_title'] ?? 'With a contactless <b>Agreebill MENU</b>.<br>Make your restaurant a safe place to eat or grab-and-go by deploying a touch-free QR Code menu.'!!}
                             </p>
                             <div class="rt-button-group">
                                 <a href="#" class="rt-btn rt-app-parimary wow fade-in-left" data-wow-duration="1.7s"
@@ -639,7 +639,7 @@
                     <div class="row align-items-center">
                         <div class="col-xl-12text-center text-xl-left">
                             {!! $selected_language->data['crafted_with_love'] ?? 'Crafted with <i class="fa fa-heart text-danger"></i> by' !!}
-                            {{$account_info !=NULL ? $account_info->application_name:'MAX-QR MENU'}}.
+                            {{$account_info !=NULL ? $account_info->application_name:'Agreebill MENU'}}.
                         </div><!-- /.col-lg-4 -->
 
                     </div><!-- /.row -->

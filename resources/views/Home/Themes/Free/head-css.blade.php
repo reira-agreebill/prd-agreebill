@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 
-    <title> {{$account_info != NULL ?$account_info->application_name:"MAX-QR Digital Menu"}}</title>
+    <title> {{$account_info != NULL ?$account_info->application_name:"Agreebill Digital Menu"}}</title>
 
 
     <!-- ================= Favicon ================== -->
-    <link rel="icon" type="image/png" href="{{asset('themes/default/images/all-img/fav.png')}}">
+    <link rel="icon" type="image/png" href="{{asset('themes/default/images/all-img/agreebill-icon.png')}}">
 
     <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,500,600,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,700" rel="stylesheet">

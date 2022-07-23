@@ -9,7 +9,7 @@
     <title>{{ Auth::user()->store_name }}</title>
 
     <!-- ================= Favicon ================== -->
-    <link rel="icon" type="image/png" href="{{asset('themes/default/images/all-img/fav.png')}}">
+    <link rel="icon" type="image/png" href="{{asset('themes/default/images/all-img/agreebill-icon.png')}}">
 
     <link href={{asset('assets/css/lib/calendar2/pignose.calendar.min.css')}} rel="stylesheet"/>
     <!-- Fonts -->

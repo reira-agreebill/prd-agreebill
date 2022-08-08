@@ -171,7 +171,7 @@
                                 <div class="font-weight-550 order-bottom-1">
 
                                     @if($order->order_type == 1)
-                                        <b>  {{$selected_language->data['store_tableno'] ?? 'Table No'}}
+                                        <b>  {{$selected_language->data['store_tableno'] ?? 'Room No'}}
                                             :</b> {{$order->table_no}}
                                     @endif
 

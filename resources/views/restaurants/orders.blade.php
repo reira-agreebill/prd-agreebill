@@ -85,7 +85,7 @@
                         <th>Status</th>
                         <th>Order Type</th>
                         <th>Order Placed At</th>
-                        <th>{{$selected_language->data['store_tableno'] ?? 'Table No'}}</th>
+                        <th>{{$selected_language->data['store_tableno'] ?? 'Room No'}}</th>
                         <th>Action</th>
                         <th>View Order</th>
                     </tr>

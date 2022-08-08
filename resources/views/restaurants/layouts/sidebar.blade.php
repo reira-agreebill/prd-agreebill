@@ -112,13 +112,13 @@
                             <i class="icofont-paper text-flat-darker" style="font-size: 1.1rem"></i>
                             <span class="nav-link-text">{{$selected_language->data['store_subscription_plans'] ?? 'Subscription Plans'}}</span>
                         </a>
-                    </li> -->
+                    </li>
                     <li class="nav-item">
                         <a  class="nav-link" href="{{route('store_admin.customers')}}">
                             <i class="fas fa-users text-red"></i>
                             <span class="nav-link-text">{{$selected_language->data['store_customers'] ?? 'Customers'}}</span>
                         </a>
-                    </li>
+                    </li> -->
 
                     <li class="nav-item">
                         <a  class="nav-link" href="{{route('store_admin.settings')}}">

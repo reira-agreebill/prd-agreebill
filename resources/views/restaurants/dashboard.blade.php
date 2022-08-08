@@ -93,7 +93,7 @@
                                             <div class="col">
 
                 <span class="h6 surtitle text-muted">
-                 {{$selected_language->data['store_tableno'] ?? 'Table No'}}
+                 {{$selected_language->data['store_tableno'] ?? 'Room No'}}
                 </span>
                                                 <div class="h4">{{ $pending->table_no }}</div>
 
@@ -103,7 +103,7 @@
                 <span class="h6 surtitle text-muted">
                 {{$selected_language->data['store_total'] ?? 'Total'}}
                 </span>
-                                                <div class="h4">{{ $pending->total }}</div>
+                                                <div class="h4">{{ number_format($pending->total) }}</div>
 
                                             </div>
                                         </div>

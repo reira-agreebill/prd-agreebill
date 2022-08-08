@@ -1120,7 +1120,7 @@
                                                        required>
                                             </div>
                                             <div class="form-group">
-                                                <label class="form-control-label" for="input-username">TABLE NO</label>
+                                                <label class="form-control-label" for="input-username">Room NO</label>
                                                 <input type="text" name="store_tableno" class="form-control" value="TABLE NO"
                                                        required>
                                             </div>

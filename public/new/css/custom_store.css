@@ -1,3 +1,9 @@
+.timeline-step {
+    z-index: 0 !important;
+}
+.float{
+    z-index: 9999;
+}
 .agree-navbar{
     white-space: initial;
     padding-top: 15px;

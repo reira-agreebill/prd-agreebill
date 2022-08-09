@@ -32,7 +32,7 @@
 
                                         <div class="col">
                                             <h4 >
-                                                <b>Table No</b> /  <b>Code</b>
+                                                <b>Room No</b> /  <b>Code</b>
                                             </h4>
                                             <br>
                                            <button type="button" class="btn btn-sm btn-primary">Edit</button>
@@ -60,7 +60,7 @@
 
                                         <div class="col">
                                             <h4 >
-                                                <b>Table No</b> /  <b>Code</b>
+                                                <b>Room No</b> /  <b>Code</b>
                                             </h4>
                                             <br>
                                             <button type="button" class="btn btn-sm btn-primary">Edit</button>
@@ -90,7 +90,7 @@
 
                                         <div class="col">
                                             <h4 >
-                                                <b>Table No</b> /  <b>Code</b>
+                                                <b>Room No</b> /  <b>Code</b>
                                             </h4>
                                             <br>
                                             <button type="button" class="btn btn-sm btn-primary">Edit</button>
@@ -120,7 +120,7 @@
 
                                         <div class="col">
                                             <h4 >
-                                                <b>Table No</b> /  <b>Code</b>
+                                                <b>Room No</b> /  <b>Code</b>
                                             </h4>
                                             <br>
                                             <button type="button" class="btn btn-sm btn-primary">Edit</button>
@@ -150,7 +150,7 @@
 
                                         <div class="col">
                                             <h4 >
-                                                <b>Table No</b> /  <b>Code</b>
+                                                <b>Room No</b> /  <b>Code</b>
                                             </h4>
                                             <br>
                                             <button type="button" class="btn btn-sm btn-primary">Edit</button>

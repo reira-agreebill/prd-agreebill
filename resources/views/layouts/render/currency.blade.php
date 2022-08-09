@@ -7,10 +7,10 @@
         @if(\App\Application::all()->first()->currency_symbol_location  == "right")
         <price> {{$amount}} {{$currency }}</price>
         @else
-        <price>{{$currency }} {{$amount}} </price>
+        <price>{{$currency }} {{number_format($amount)}} </price>
         @endif
     @else
-        <price>{{$amount}}</price>
+        <price>{{number_format($amount)}}</price>
     @endif
 
 

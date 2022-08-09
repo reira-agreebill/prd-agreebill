@@ -1112,7 +1112,7 @@
                                                            required>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="form-control-label" for="input-username">TABLE NO</label>
+                                                    <label class="form-control-label" for="input-username">ROOM NO</label>
                                                     <input type="text" name="store_tableno" class="form-control" value="{{$data->data['store_tableno'] ?? ''}}"
                                                            required>
                                                 </div>

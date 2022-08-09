@@ -55,7 +55,7 @@
                                     <div class="col">
 
                 <span class="h6 surtitle text-muted">
-               {{$selected_language->data['store_tableno'] ?? 'Table No'}}
+               {{$selected_language->data['store_tableno'] ?? 'Room No'}}
                 </span>
                                         <div class="h4">{{ $data->table_name }}</div>
 

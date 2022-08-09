@@ -37,7 +37,7 @@
                                         </div>
 
                                         <div class="col-auto">
-                                            {{$selected_language->data['store_tableno'] ?? 'Table No'}}:  <b>{{ $new->table_no }}</b>
+                                            {{$selected_language->data['store_tableno'] ?? 'Room No'}}:  <b>{{ $new->table_no }}</b>
                                         </div>
                                     </div>
                                 </li>
@@ -74,7 +74,7 @@
                                             </div>
 
                                             <div class="col-auto">
-                                                {{$selected_language->data['store_tableno'] ?? 'Table No'}}:  <b>{{ $data->table_no }}</b>
+                                                {{$selected_language->data['store_tableno'] ?? 'Room No'}}:  <b>{{ $data->table_no }}</b>
                                             </div>
                                         </div>
                                     </li>
@@ -111,7 +111,7 @@
                                             </div>
 
                                             <div class="col-auto">
-                                                {{$selected_language->data['store_tableno'] ?? 'Table No'}}:  <b>{{ $read->table_no }}</b>
+                                                {{$selected_language->data['store_tableno'] ?? 'Room No'}}:  <b>{{ $read->table_no }}</b>
                                             </div>
                                         </div>
                                     </li>
